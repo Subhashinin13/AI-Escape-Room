@@ -1,0 +1,33 @@
+.timer-container{
+
+    width:100%;
+
+    background:#1E293B;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.timer-container h3{
+
+    color:#CBD5E1;
+
+    margin-bottom:15px;
+
+}
+
+.timer-container h1{
+
+    color:#38BDF8;
+
+    font-size:48px;
+
+    letter-spacing:3px;
+
+}
