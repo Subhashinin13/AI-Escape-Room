@@ -1,0 +1,49 @@
+.assistant{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    background:#1d2738;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid rgba(60,184,255,.2);
+
+    box-shadow:0 0 18px rgba(0,0,0,.4);
+}
+
+.assistant-header{
+
+    color:#3cb8ff;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.assistant-content h3{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:10px;
+}
+
+.assistant-content p{
+
+    color:#d7dbe2;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    white-space:pre-line;
+}

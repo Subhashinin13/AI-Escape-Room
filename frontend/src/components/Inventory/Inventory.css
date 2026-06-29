@@ -1,0 +1,33 @@
+.inventory {
+  background: #1f2a3d;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  min-height: 240px;
+  border: 2px solid #2f7fff;
+}
+
+.inventory h2 {
+  color: #3fa9ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.inventory-slot {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #3fa9ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  background: #111827;
+}

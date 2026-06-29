@@ -1,0 +1,59 @@
+.hud {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.hud-card {
+    width: 220px;
+    background: rgba(20,28,45,.95);
+    border: 1px solid #2c5cff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(44,92,255,.25);
+}
+
+.hud-title {
+    color: #8ea7d9;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.hud-value {
+    margin-top: 8px;
+    color: #42b9ff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.timer{
+    letter-spacing:3px;
+}
+
+.hud-center{
+    text-align:center;
+}
+
+.hud-center h1{
+    color:#37b6ff;
+    font-size:52px;
+    margin:0;
+}
+
+.hud-center p{
+    margin-top:10px;
+    color:white;
+    font-size:28px;
+    font-weight:600;
+}
+
+@media(max-width:1000px){
+
+.hud{
+flex-direction:column;
+gap:20px;
+}
+
+}

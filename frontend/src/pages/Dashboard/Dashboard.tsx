@@ -8,60 +8,50 @@ import Timer from "../../components/Timer/Timer";
 import RoomCard from "../../components/RoomCard/RoomCard";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  return (
+    <div className="dashboard-container">
+      <div className="dashboard-card">
+        <Logo subtitle="Mission Dashboard" />
 
-    return (
+        <ProgressBar progress={25} />
 
-        <div className="dashboard-container">
+        <Timer />
 
-            <div className="dashboard-card">
+        <div className="rooms-grid">
+          <RoomCard
+            roomNumber={1}
+            title="Hand Gesture Search"
+            description="Search the laboratory using hand gestures to find hidden clues."
+            unlocked={true}
+            onClick={() => navigate("/room1")}
+          />
 
-                <Logo subtitle="Mission Dashboard" />
+          <RoomCard
+            roomNumber={2}
+            title="Cipher Decoder"
+            description="Decode the encrypted AI security code."
+            unlocked={false}
+          />
 
-                <ProgressBar progress={25} />
+          <RoomCard
+            roomNumber={3}
+            title="Puzzle Assembly"
+            description="Assemble the laboratory puzzle."
+            unlocked={false}
+          />
 
-                <Timer />
-
-                <div className="rooms-grid">
-
-                    <RoomCard
-                        roomNumber={1}
-                        title="Hand Gesture Search"
-                        description="Search the laboratory using hand gestures to find hidden clues."
-                        unlocked={true}
-                        onClick={() => navigate("/room1")}
-                    />
-
-                    <RoomCard
-                        roomNumber={2}
-                        title="Cipher Decoder"
-                        description="Decode the encrypted AI security code."
-                        unlocked={false}
-                    />
-
-                    <RoomCard
-                        roomNumber={3}
-                        title="Puzzle Assembly"
-                        description="Assemble the laboratory puzzle."
-                        unlocked={false}
-                    />
-
-                    <RoomCard
-                        roomNumber={4}
-                        title="Energy Orb"
-                        description="Guide the energy orb through the electric maze."
-                        unlocked={false}
-                    />
-
-                </div>
-
-            </div>
-
+          <RoomCard
+            roomNumber={4}
+            title="Energy Orb"
+            description="Guide the energy orb through the electric maze."
+            unlocked={false}
+          />
         </div>
-
-    );
-
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
