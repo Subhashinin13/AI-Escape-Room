@@ -1,17 +1,23 @@
-.custom-input{
+.input-wrapper {
+    width: 100%;
+}
 
-    width:380px;
+.custom-input {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+}
 
-    padding:14px;
+.custom-input:focus {
+    border: 2px solid #38BDF8;
+}
 
-    border-radius:8px;
-
-    border:none;
-
-    outline:none;
-
-    font-size:16px;
-
-    background:white;
-
+.error-text {
+    color: #ff5d5d;
+    font-size: 13px;
+    margin-top: 6px;
 }

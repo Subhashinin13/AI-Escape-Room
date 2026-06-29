@@ -1,40 +1,76 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Story.css";
 
-function Story() {
+const storyText = `Year 2048.
 
-    return (
+You are one of the brightest AI Engineers in the world.
 
-        <div className="story-container">
+You have been invited to Neural Labs to test a revolutionary Artificial Intelligence system.
 
-            <h1>Mission Briefing</h1>
+But something goes terribly wrong...
 
-            <p>
+The AI locks down the entire laboratory and seals every exit.
 
-                You are trapped inside the Neural Labs.
+To escape, you must solve four intelligent puzzle rooms.
 
-                Four AI security rooms protect the exit.
+Each room tests a different engineering skill.
 
-                Solve every challenge using your intelligence
+Can you defeat the AI before time runs out?`;
 
-                and hand gestures.
+const Story = () => {
+  const navigate = useNavigate();
 
-            </p>
+  const [displayText, setDisplayText] = useState("");
 
-            <Link to="/dashboard">
+  useEffect(() => {
+    let index = 0;
 
-                <button>
+    const interval = setInterval(() => {
+      setDisplayText(storyText.substring(0, index));
+      index++;
 
-                    Begin Mission
+      if (index > storyText.length) {
+        clearInterval(interval);
+      }
+    }, 25);
 
-                </button>
+    return () => clearInterval(interval);
+  }, []);
 
-            </Link>
+  return (
+    <div className="story-container">
+
+      <div className="story-card">
+
+        <h1>Mission Briefing</h1>
+
+        <div className="story-box">
+          <p>{displayText}</p>
+        </div>
+
+        <div className="story-buttons">
+
+          <button
+            className="skip-btn"
+            onClick={() => navigate("/dashboard")}
+          >
+            Skip
+          </button>
+
+          <button
+            className="continue-btn"
+            onClick={() => navigate("/dashboard")}
+          >
+            Continue
+          </button>
 
         </div>
 
-    );
+      </div>
 
-}
+    </div>
+  );
+};
 
 export default Story;

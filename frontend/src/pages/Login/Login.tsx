@@ -1,66 +1,68 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import "./Login.css";
 
 import Logo from "../../components/Logo/Logo";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 
-import "./Login.css";
+import { validateLogin } from "../../validations/LoginValidation";
 
-function Login() {
+const Login = () => {
+  const navigate = useNavigate();
 
-    // State Variables
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    // Login Button Click
-    const handleLogin = () => {
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
 
-        // We will add validation and API call later
+  const handleLogin = () => {
+    const validation = validateLogin(email, password);
 
-        console.log("Email :", email);
-        console.log("Password :", password);
+    setErrors({
+      email: validation.email || "",
+      password: validation.password || "",
+    });
 
-    };
+    if (Object.keys(validation).length === 0) {
+      navigate("/story");
+    }
+  };
 
-    return (
+  return (
+    <div className="login-container">
+      <div className="login-card">
 
-        <div className="login-container">
+        <Logo />
 
-            <div className="login-card">
+        <Input
+          type="email"
+          placeholder="Enter Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          error={errors.email}
+        />
 
-                <Logo subtitle="AI Security Authentication" />
+        <Input
+          type="password"
+          placeholder="Enter Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          error={errors.password}
+        />
 
-                <Input
-                    type="email"
-                    placeholder="Enter Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+        <Button
+          text="LOGIN"
+          onClick={handleLogin}
+        />
 
-                <Input
-                    type="password"
-                    placeholder="Enter Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-
-                <Link
-                    to="/story"
-                    className="login-link"
-                >
-                    <Button
-                        text="LOGIN"
-                        onClick={handleLogin}
-                    />
-                </Link>
-
-            </div>
-
-        </div>
-
-    );
-
-}
+      </div>
+    </div>
+  );
+};
 
 export default Login;
