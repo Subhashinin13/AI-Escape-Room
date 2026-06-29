@@ -1,0 +1,93 @@
+.room-card{
+
+    background:#1E293B;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    transition:.3s;
+
+}
+
+.room-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.room-card h2{
+
+    color:#38BDF8;
+
+}
+
+.room-card h3{
+
+    color:white;
+
+}
+
+.room-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.6;
+
+}
+
+.room-card button{
+
+    margin-top:10px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+.unlocked button{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.unlocked button:hover{
+
+    background:#1D4ED8;
+
+}
+
+.locked{
+
+    opacity:.6;
+
+}
+
+.locked button{
+
+    background:#475569;
+
+    color:white;
+
+    cursor:not-allowed;
+
+}
