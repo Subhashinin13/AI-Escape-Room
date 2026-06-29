@@ -1,0 +1,67 @@
+body{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0F172A;
+
+}
+
+.loading-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    color:white;
+
+}
+
+.game-title{
+
+    color:#38BDF8;
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.loading-text{
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+}
+
+.progress-bar{
+
+    width:500px;
+
+    height:20px;
+
+    border-radius:50px;
+
+    background:#1E293B;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#3B82F6,#9333EA);
+
+    transition:width .03s linear;
+
+}

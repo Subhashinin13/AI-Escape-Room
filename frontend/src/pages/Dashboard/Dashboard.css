@@ -1,0 +1,33 @@
+.dashboard{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    color:white;
+
+    gap:25px;
+
+}
+
+.dashboard button{
+
+    padding:15px 35px;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}

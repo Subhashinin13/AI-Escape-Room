@@ -1,0 +1,37 @@
+.custom-button{
+
+    width:410px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.custom-button:hover{
+
+    background:#1D4ED8;
+
+}
+
+.custom-button:disabled{
+
+    background:#475569;
+
+    cursor:not-allowed;
+
+}
