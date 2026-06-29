@@ -1,25 +1,67 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Dashboard.css";
 
-function Dashboard() {
+import Logo from "../../components/Logo/Logo";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import Timer from "../../components/Timer/Timer";
+import RoomCard from "../../components/RoomCard/RoomCard";
+
+const Dashboard = () => {
+
+    const navigate = useNavigate();
 
     return (
 
-        <div className="dashboard">
+        <div className="dashboard-container">
 
-            <h1>Mission Dashboard</h1>
+            <div className="dashboard-card">
 
-            <h2>Choose Your First Room</h2>
+                <Logo subtitle="Mission Dashboard" />
 
-            <button>
+                <ProgressBar progress={25} />
 
-                Start Room 1
+                <Timer />
 
-            </button>
+                <div className="rooms-grid">
+
+                    <RoomCard
+                        roomNumber={1}
+                        title="Hand Gesture Search"
+                        description="Search the laboratory using hand gestures to find hidden clues."
+                        unlocked={true}
+                        onClick={() => navigate("/room1")}
+                    />
+
+                    <RoomCard
+                        roomNumber={2}
+                        title="Cipher Decoder"
+                        description="Decode the encrypted AI security code."
+                        unlocked={false}
+                    />
+
+                    <RoomCard
+                        roomNumber={3}
+                        title="Puzzle Assembly"
+                        description="Assemble the laboratory puzzle."
+                        unlocked={false}
+                    />
+
+                    <RoomCard
+                        roomNumber={4}
+                        title="Energy Orb"
+                        description="Guide the energy orb through the electric maze."
+                        unlocked={false}
+                    />
+
+                </div>
+
+            </div>
 
         </div>
 
     );
 
-}
+};
 
 export default Dashboard;

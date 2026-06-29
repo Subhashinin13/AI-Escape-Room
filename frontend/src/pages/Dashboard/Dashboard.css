@@ -1,33 +1,45 @@
-.dashboard{
+.dashboard-container{
+
+    min-height:100vh;
+
+    background:#0F172A;
 
     display:flex;
-
-    flex-direction:column;
 
     justify-content:center;
 
     align-items:center;
 
-    height:100vh;
-
-    color:white;
-
-    gap:25px;
+    padding:40px;
 
 }
 
-.dashboard button{
+.dashboard-card{
 
-    padding:15px 35px;
+    width:1100px;
 
-    background:#8b5cf6;
+    background:#1E293B;
 
-    color:white;
+    border-radius:20px;
 
-    border:none;
+    padding:40px;
 
-    border-radius:8px;
+    display:flex;
 
-    cursor:pointer;
+    flex-direction:column;
+
+    gap:30px;
+
+    box-shadow:0 0 30px rgba(59,130,246,.3);
+
+}
+
+.rooms-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
 
 }
