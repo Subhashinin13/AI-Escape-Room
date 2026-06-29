@@ -1,0 +1,49 @@
+.game-layout{
+
+    min-height:100vh;
+
+    background:#0d1628;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.game-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.bottom-panels{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+@media(max-width:1000px){
+
+.bottom-panels{
+
+grid-template-columns:1fr;
+
+}
+
+}

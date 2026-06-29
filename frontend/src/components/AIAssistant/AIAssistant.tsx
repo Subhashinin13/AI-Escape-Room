@@ -2,25 +2,24 @@ import "./AIAssistant.css";
 
 interface AIAssistantProps {
   title: string;
-  message: string;
+  subtitle: string;
+  description: string;
 }
 
-const AIAssistant = ({ title, message }: AIAssistantProps) => {
+const AIAssistant = ({
+  title,
+  subtitle,
+  description,
+}: AIAssistantProps) => {
   return (
-    <div className="assistant">
+    <div className="ai-assistant">
+      <h2>🤖 AI Assistant</h2>
 
-      <div className="assistant-header">
-        🤖 AI Assistant
-      </div>
+      <h3>{title}</h3>
 
-      <div className="assistant-content">
+      <h4>{subtitle}</h4>
 
-        <h3>{title}</h3>
-
-        <p>{message}</p>
-
-      </div>
-
+      <p>{description}</p>
     </div>
   );
 };
